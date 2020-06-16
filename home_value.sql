@@ -102,12 +102,6 @@ SELECT state, ROUND(100*(end_value - start_value)/start_value) AS 'percent chang
 FROM combine
 ORDER BY 2 DESC;
 
-SELECT
-	start_year.state,
-	ROUND(100*(end_year.end_value - start_year.start_value)/start_year.start_value) AS 'percent change'
-FROM start_year, end_year
-GROUP BY 1
-ORDER BY 2 DESC;
 
 /* Based on this information I would invest in real estate in DC, because it has the largest percentage increase in average home value from 1997 to 2017 and the second largest from 2007 to 2017.  Therefore DC has a long and stable trend of growth, making it a relatively safe bet for investers.
 An argument could be made to invest in North Dakota instead because it has the largest percentage increase from 2007 to 2017.
